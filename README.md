@@ -58,4 +58,14 @@ Contentful integrated application is designed for users to make cryptocurrency t
 . npm run create-app-definition
 ```
 
+## NEAR Features
+
+- Login
+- Account Info
+- Balance
+- Sending NEAR
+- Calling contract methods
+
+
+
 
