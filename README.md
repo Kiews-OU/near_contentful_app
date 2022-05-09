@@ -57,6 +57,7 @@ Contentful integrated application is designed for users to make cryptocurrency t
 . npm run start
 . npm run create-app-definition
 ```
+## Project Structure
 ```
 src\
  |--components\              # components codes
