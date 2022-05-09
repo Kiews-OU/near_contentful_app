@@ -3,7 +3,7 @@ import { utils, connect } from "near-api-js"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import getConfig from "../locations/config"
-import { LoadAcc, signOut,SendMoney } from "../locations/utils"
+import { LoadAcc, signOut,SendMoney, RecieveMoney } from "../locations/utils"
 import { parseContract } from 'near-contract-parser'
 import './index.css';
 const nearAPI = require("near-api-js")
@@ -14,18 +14,12 @@ export const WalletAccount = ({ sdk }) => {
     useEffect(()=>{
         LoadAcc()
     },[])
-    // console.log(sdk);
     const nearConfig = getConfig(process.env.NODE_ENV || 'development')
     let walletData = useSelector((state) => state.wallet)
     const [active, setActive] = useState(Boolean)
-    const [active1, setActive1] = useState(false)
     const [balance, setBalance] = useState("")
     let dispatch = useDispatch()
-    // console.log(walletData);
 
-    const sender = localStorage.accountID
-    const receiver = `${walletData.rid}`;
-    const amount = utils.format.parseNearAmount(`${walletData.sum}`);
     const BalanceInUSd = balance * walletData.price
     const usdSum = walletData.sum * walletData.price
 
@@ -62,7 +56,6 @@ export const WalletAccount = ({ sdk }) => {
         setActive(false)
         GetBalance()
         GetCurrency()
-        setActive1(true)
     }, [])
 
 
@@ -122,7 +115,7 @@ export const WalletAccount = ({ sdk }) => {
                         </div>
 
                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}
-                            oncloc
+                            onClick={RecieveMoney}
                         >
                             <div
                                 className="buttons" >

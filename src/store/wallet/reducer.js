@@ -15,7 +15,6 @@ export const walletReducer = (state = walletState, option) => {
     case "idChange":
       state.walletData.id=option.value
       localStorage.setItem('accountID',option.value)
-      // console.log(localStorage);
       return state
       case "setdata":
         state.walletSum = option.available
@@ -38,11 +37,6 @@ export const walletReducer = (state = walletState, option) => {
         case "setAccData":
           state[option.key]=option.value
           return state
-          case "select":
-            state.book.name=option.name
-            state.book.price=option.price
-            state.books.push(state.book)
-            return state
     default:
       return state;
   }

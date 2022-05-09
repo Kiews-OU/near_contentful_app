@@ -8,7 +8,6 @@ import LocalhostWarning from './components/LocalhostWarning';
 import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { Routess } from './Router';
 
 const root = document.getElementById('root');
 
