@@ -45,18 +45,6 @@ Contentful is an effective tool for creating and managing your application onlin
 ## Description:
 Contentful integrated application is designed for users to make cryptocurrency transfers and check balances. Here, each user can have more than one account and check what methods were used in those accounts.
 
-## Installation
-```bash
-. git clone https://github.com/armen95/near_contentful_app.git
-. cd near_contentful_app
-. npm install
-```
-
-## Run
-```bash
-. npm run start
-. npm run create-app-definition
-```
 ## Project Structure
 ```
 src\
@@ -80,6 +68,20 @@ src\
 - Balance
 - Make Transactions
 - Calling contract methods
+
+## Installation
+```bash
+. git clone https://github.com/armen95/near_contentful_app.git
+. cd near_contentful_app
+. npm install
+```
+
+## Run
+```bash
+. npm run start
+. npm run create-app-definition
+```
+
 
 
 
